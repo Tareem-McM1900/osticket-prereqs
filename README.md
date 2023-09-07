@@ -24,7 +24,7 @@ This tutorial highlights the Prerequisites, Installation and Configuration of th
 
 - Windows 10</b> (21H2)
 
-<h2>Prerequisites, Installation</h2>
+<h2>Prerequisites, Installation Steps</h2>
 
 - Step 1: Create a Windows 10 Virtual Machine in Azure
 
@@ -54,33 +54,62 @@ Install the IIS role and required features:
 <p>
 <img src="https://i.imgur.com/htpa4vC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-- Item 2
-- Item 3
-- Item 4
-- Item 5
 
-<h2>Installation Steps</h2>
+- Step 3: Install PHP
 
-<p>
-<img src="https://i.imgur.com/ORpHJRN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+Download and install PHP for Windows. Choose the appropriate version (e.g., PHP 7.4) from the PHP Windows downloads page: https://windows.php.net/download/
 
+Extract the PHP files to a directory of your choice (e.g., C:\PHP).
+
+Add the PHP directory to the system's PATH environment variable.
+
+Register PHP with IIS:
 <p>
-<img src="[https://i.imgur.com/DJmEXEB.png](https://imgur.com/ORpHJRN)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/CBuS5D8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+- Step 4: Install HeidiSQL
+
+Download the HeidiSQL installer for Windows: https://www.heidisql.com/download.php
+
+Run the installer and follow the installation instructions.
+
+- Step 5: Download and Configure osTicket
+
+Download the latest osTicket package (ZIP format) from the official website: https://osticket.com/download/
+
+Extract the osTicket files to the IIS web root directory (e.g., C:\inetpub\wwwroot\osticket).
+
+Create a MySQL database for osTicket using HeidiSQL database management tool.
+Open Heidi SQL
+Create a new session, root/Password1
+Connect to the session
+Create a database called “osTicket”
+
+Open a web browser on your Windows 10 VM and access the osTicket installation page by entering the following URL:
+Continue Setting up osticket in the browser.
+MySQL Database: osTicket
+MySQL Username: root
+MySQL Password: Password1
+Click “Install Now!”
+
+Note: There are several ways to set this part up. What worked for me was:
+
+1. Database Setup: Create a database and user for osTicket. For MySQL, use the following commands:
+
+bashCopy code
+
+mysql -u root -p CREATE DATABASE osticketdb; CREATE USER 'osticketuser'@'localhost' IDENTIFIED BY 'your_password'; GRANT ALL PRIVILEGES ON osticketdb.* TO 'osticketuser'@'localhost'; FLUSH PRIVILEGES; EXIT; 
+
+2. Configuration: Access osTicket via a web browser (e.g., http://your_server_ip/osticket) to complete the installation and configure settings.
+
+Follow the on-screen instructions to complete the osTicket setup, including database configuration.
+
+
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Closing remarks
 </p>
 <br />
