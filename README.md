@@ -107,9 +107,22 @@ Follow the on-screen instructions to complete the osTicket setup, including data
 
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oroGlKc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Closing remarks
-</p>
-<br />
+
+<h2>My Closing Remarks</h2>
+   
+Setting up osTicket can be a straightforward process when you follow the right steps and prerequisites as well as having the necessary resources in place. Whether you're deploying it on a virtual machine in Azure, a dedicated server, or any other hosting environment, osTicket offers a robust solution for managing customer support inquiries.
+
+Remember that the key to a successful osTicket setup includes:
+
+1.	Adequate Server Resources: Ensure that your server or VM meets the system requirements, including web server, PHP, and database, to run osTicket efficiently.
+2.	Proper Configuration: Carefully configure your web server, database, and PHP settings to align with osTicket's requirements.
+3.	Security: Implement security best practices to protect sensitive customer data and maintain the integrity of your support system.
+4.	Regular Updates: Keep osTicket and its dependencies up to date to benefit from the latest features and security enhancements.
+5.	Testing: Thoroughly test your osTicket installation to ensure that it's working as expected for both support agents and end-users.
+
+By following these guidelines, you can create a reliable and efficient customer support system with osTicket, helping your organization deliver excellent customer service.
+
+
