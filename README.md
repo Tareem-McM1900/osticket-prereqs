@@ -42,7 +42,7 @@ Password: osTicketPassword1
 VM Size: Choose one with 4 vCPUs.
 Configure the network settings, storage, and other options as needed.
 
-Click "Review + create" and then "Create" to deploy the VM.
+Click "Review + Create" and then "Create" to deploy the VM.
 
 - Step 2: Enable IIS with CGI and Common HTTP Features
 
